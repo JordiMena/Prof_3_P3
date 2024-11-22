@@ -1,5 +1,11 @@
+using System.Diagnostics;
+using System.Net;
+using Newtonsoft.Json;
+using System.Globalization;
+using System.Net.Http.Headers;
+
 public class Desarrollo{
-  public static void eje1(){
+    public static void eje1(){
         Console.WriteLine("Escribe el primer lado");
         double lado1 = Convert.ToDouble(Console.ReadLine());
 
@@ -41,5 +47,34 @@ public class Desarrollo{
             Console.WriteLine($"{number} x {i} = {r}");
         }
 
+    }
+
+        public static void eje3()
+    {
+        Console.WriteLine("Escribe tu nombre");
+        string nombre = Console.ReadLine()!;
+
+        string url = "https://api.genderize.io/?name=" + nombre;
+
+        string json = new WebClient().DownloadString(url);
+
+        Genero datos = JsonConvert.DeserializeObject<Genero>(json)!;
+        
+        var genero = (datos.gender == "male")?"Masculino": "Femenino";
+
+        Console.Write($"Su genero es: {genero}");
+
+    }
+
+     public class Genero
+    {
+        public int count { get; set; }
+        public string name { get; set; }
+        public string gender { get; set; }
+        public double probability { get; set; }
+    }
+
+    
+}
     }
   {
