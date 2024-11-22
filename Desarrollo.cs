@@ -29,4 +29,17 @@ public class Desarrollo{
         }
 
     }
+
+    public static void eje2()
+    {
+        Console.WriteLine("Escibe el numero que deseas multiplicar");
+        double number = Convert.ToDouble(Console.ReadLine());
+
+        for (int i = 12; i >= 1; i --)
+        {
+            double r = number * i;
+            Console.WriteLine($"{number} x {i} = {r}");
+        }
+
+    }
   {
