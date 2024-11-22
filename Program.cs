@@ -20,6 +20,8 @@ while(continuar == true){
     Console.WriteLine("Elige la opcion: ");
     int opcion1 = Convert.ToInt32(Console.ReadLine());    
 
+    switch (opcion1){
+
         case 0:
         continuar = false;
         Console.WriteLine("Gracias por utilizar este programa.");
@@ -43,7 +45,7 @@ while(continuar == true){
         break;
 
         case 2:
-    Console.WriteLine(@"
+        Console.WriteLine(@"
         ███████╗██╗  ██╗███████╗██████╗  ██████╗██╗███████╗███████╗    ██████╗ 
         ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██╔════╝██║██╔════╝██╔════╝    ╚════██╗
         █████╗   ╚███╔╝ █████╗  ██████╔╝██║     ██║███████╗█████╗       █████╔╝
@@ -55,11 +57,22 @@ while(continuar == true){
 
         Console.Write("Presiona enter para continuar");
         Console.ReadKey();
-
         break;
 
-        case 3:
+        case 3:Console.WriteLine(@"
+    
+        ███████╗██╗  ██╗███████╗██████╗  ██████╗██╗███████╗███████╗    ██████╗ 
+        ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██╔════╝██║██╔════╝██╔════╝    ╚════██╗
+        █████╗   ╚███╔╝ █████╗  ██████╔╝██║     ██║███████╗█████╗       █████╔╝
+        ██╔══╝   ██╔██╗ ██╔══╝  ██╔══██╗██║     ██║╚════██║██╔══╝       ╚═══██╗
+        ███████╗██╔╝ ██╗███████╗██║  ██║╚██████╗██║███████║███████╗    ██████╔╝
+        ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝╚══════╝╚══════╝    ╚═════╝ 
+        ");
 
+        Desarrollo.eje3();
+
+        Console.Write("Presiona enter para continuar");
+        Console.ReadKey();
         break;
 
         
